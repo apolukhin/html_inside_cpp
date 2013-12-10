@@ -53,3 +53,12 @@ Here is what will be outputted by running `main.cpp`:
 ```<!-- --> <!DOCTYPE html> <html> <head></head> <body>Hello word!</body> </html> <!--```
 
 In your project you'll have `main.cpp` and `hello.html` files. And `hello.html` can be shown in browser and modified independently from `main.cpp`.
+
+Restrictions
+===============
+* In HTML lines must not start with `#`.
+* JavaScript must use `/*` and `*/` comments.
+* JavaScript comments will be totaly removed in C++ source.
+* All the newlines will be romowed from HTML document that is embedded in C++ source (use `;` in JavaScript!).
+* `\` must be replaced with `\\` (beware JavaScript regex users!)
+* HTML page must start with: ``` <!-- HTML_HELPER const char html_page[] = TO_STRING( <!-- --> <!DOCTYPE html> ```.
