@@ -3,6 +3,13 @@ html_inside_cpp
 
 Allows inclusion of html pages inside C++ code
 
+Motivation
+===============
+
+More and more applications use web-interfaces nowadays. Situations when HTML pages must be returned by C++ program become more common. But embedding pages inside a C++ source file as text strings is not HTML developer friendly, while having bunch of HTML pages with program distribution may be not a nice solution for small programs or programs that do not carry around resources.
+
+html_inside_cpp allows you to embed HTML page in C++ source, still leaving the HTML page usable and modifiable by HTML developer.
+
 Example
 ===============
 Imagine that you have a small HTML file `hello.html`, that must be embedded inside C++ source file:
@@ -44,3 +51,5 @@ int main() {
 ```
 Here is what will be outputted by running `main.cpp`:
 ```<!-- --> <!DOCTYPE html> <html> <head></head> <body>Hello word!</body> </html> <!--```
+
+In your project you'll have `main.cpp` and `hello.html` files. And `hello.html` can be shown in browser and modified independently from `main.cpp`.
